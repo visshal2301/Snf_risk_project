@@ -1,0 +1,15 @@
+{
+  "subject_area": "POSITIONS",
+  "version": "1.0",
+  "allow_extra_columns": true,
+  "columns": [
+    {"name": "POSITION_DATE", "type": "date", "nullable": false},
+    {"name": "PORTFOLIO_ID", "type": "string", "nullable": false},
+    {"name": "COUNTERPARTY_ID", "type": "string", "nullable": false},
+    {"name": "INSTRUMENT_ID", "type": "string", "nullable": false},
+    {"name": "SETTLED_QUANTITY", "type": "number", "nullable": false},
+    {"name": "BOOK_VALUE", "type": "number", "nullable": false},
+    {"name": "MARKET_VALUE", "type": "number", "nullable": false},
+    {"name": "UNREALIZED_PNL", "type": "number", "nullable": false}
+  ]
+}

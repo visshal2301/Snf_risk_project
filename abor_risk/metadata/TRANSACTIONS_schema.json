@@ -1,0 +1,18 @@
+{
+  "subject_area": "TRANSACTIONS",
+  "version": "1.0",
+  "allow_extra_columns": true,
+  "columns": [
+    {"name": "TRANSACTION_ID", "type": "string", "nullable": false},
+    {"name": "TRANSACTION_DATE", "type": "date", "nullable": false},
+    {"name": "SETTLEMENT_DATE", "type": "date", "nullable": false},
+    {"name": "PORTFOLIO_ID", "type": "string", "nullable": false},
+    {"name": "COUNTERPARTY_ID", "type": "string", "nullable": false},
+    {"name": "INSTRUMENT_ID", "type": "string", "nullable": false},
+    {"name": "TRANSACTION_TYPE", "type": "string", "nullable": false},
+    {"name": "QUANTITY", "type": "number", "nullable": false},
+    {"name": "PRICE", "type": "number", "nullable": false},
+    {"name": "SETTLED_AMOUNT", "type": "number", "nullable": false},
+    {"name": "CURRENCY", "type": "string", "nullable": false}
+  ]
+}

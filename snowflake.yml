@@ -1,0 +1,17 @@
+definition_version: '1.0'
+project:
+  name: snowflake_risk_project
+  type: snowpark
+  meta:
+    role: RISK_DEV_ROLE
+    warehouse: RISK_WH
+
+env:
+  dev:
+    account: my_organization-dev_account
+    database: RISK_DB_DEV
+    schema: RISK_SCHEMA_DEV
+  prod:
+    account: my_organization-prod_account
+    database: RISK_DB_PROD
+    schema: RISK_SCHEMA_PROD

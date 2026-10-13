@@ -1,0 +1,17 @@
+{
+  "subject_area": "COUNTERPARTY",
+  "version": "1.0",
+  "allow_extra_columns": true,
+  "columns": [
+    {"name": "COUNTERPARTY_ID", "type": "string", "nullable": false},
+    {"name": "COUNTERPARTY_NAME", "type": "string", "nullable": false},
+    {"name": "LEI_CODE", "type": "string", "nullable": false},
+    {"name": "SECTOR", "type": "string", "nullable": false},
+    {"name": "CREDIT_RATING", "type": "string", "nullable": false},
+    {"name": "JURISDICTION", "type": "string", "nullable": false},
+    {"name": "NETTING_AGREEMENT_TYPE", "type": "string", "nullable": false},
+    {"name": "EFFECTIVE_START_DATE", "type": "date", "nullable": false},
+    {"name": "EFFECTIVE_END_DATE", "type": "date", "nullable": false},
+    {"name": "IS_ACTIVE", "type": "bool", "nullable": false}
+  ]
+}

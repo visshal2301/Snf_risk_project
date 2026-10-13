@@ -1,0 +1,35 @@
+snowflake:
+  account: "${SNOWFLAKE_ACCOUNT}"
+  user: "${SNOWFLAKE_USER}"
+  role: "${SNOWFLAKE_ROLE}"
+  warehouse: "${SNOWFLAKE_WAREHOUSE}"
+  database: "RISK_DEV_DB"
+  schema: "${SNOWFLAKE_SCHEMA}"
+
+pipeline:
+  environment: "dev"
+  high_risk_threshold: 0.75
+  log_level: "DEBUG"
+
+cortex:
+  var_forecast:
+    forecast_days: 14
+    prediction_interval: 0.95
+    lower_bound: 0.0
+    breach_threshold_pct: 15.0
+    elevated_threshold_pct: 10.0
+    model_name: "ANALYTICS.ML_PORTFOLIO_VAR_FORECAST"
+    destination_table: "ANALYTICS.FACT_PORTFOLIO_RISK_FORECASTS"
+    input_view: "ANALYTICS.VW_PORTFOLIO_VAR_TS_INPUT"
+
+  anomaly_detection:
+    prediction_interval: 0.99
+    critical_percentile: 0.999
+    high_percentile: 0.990
+    model_name: "ANALYTICS.ML_RISK_ANOMALY_DETECTOR"
+    destination_table: "ANALYTICS.FACT_RISK_ANOMALIES"
+    input_view: "ANALYTICS.VW_PORTFOLIO_ANOMALY_INPUT"
+    train_cutoff_date: "2026-05-31"
+    stream_name: "ANALYTICS.STR_PORTFOLIO_RISK_CHANGES"
+    source_table: "ENG.FACT_DAILY_RISK_METRICS"
+    default_mode: "batch"

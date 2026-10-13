@@ -1,0 +1,16 @@
+{
+  "subject_area": "INSTRUMENT",
+  "version": "1.0",
+  "allow_extra_columns": true,
+  "columns": [
+    {"name": "INSTRUMENT_ID", "type": "string", "nullable": false},
+    {"name": "INSTRUMENT_NAME", "type": "string", "nullable": false},
+    {"name": "ASSET_CLASS", "type": "string", "nullable": false},
+    {"name": "SUB_ASSET_CLASS", "type": "string", "nullable": false},
+    {"name": "CURRENCY", "type": "string", "nullable": false},
+    {"name": "MATURITY_DATE", "type": "date", "nullable": true},
+    {"name": "EFFECTIVE_START_DATE", "type": "date", "nullable": false},
+    {"name": "EFFECTIVE_END_DATE", "type": "date", "nullable": false},
+    {"name": "IS_ACTIVE", "type": "bool", "nullable": false}
+  ]
+}

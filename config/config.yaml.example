@@ -1,0 +1,15 @@
+snowflake:
+  account: "ORG-ACCOUNT_NAME"
+  user: "RISK_SERVICE_USER"
+  authenticator: "SNOWFLAKE_JWT"  # Options: SNOWFLAKE, SNOWFLAKE_JWT (RSA Key), externalbrowser
+  private_key_path: "path/to/rsa_key.p8"
+  private_key_passphrase_env: "PRIVATE_KEY_PASSPHRASE"
+  role: "RISK_ANALYTICS_ROLE"
+  warehouse: "RISK_COMPUTE_WH"
+  database: "RISK_DB"
+  schema: "PUBLIC"
+
+pipeline:
+  batch_size: 10000
+  high_risk_threshold: 0.85
+  log_level: "INFO"

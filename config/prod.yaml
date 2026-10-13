@@ -1,0 +1,12 @@
+snowflake:
+  account: "${SNOWFLAKE_ACCOUNT}"
+  user: "${SNOWFLAKE_USER}"
+  role: "${SNOWFLAKE_ROLE}"
+  warehouse: "${SNOWFLAKE_WAREHOUSE}"
+  database: "RISK_PROD_DB"
+  schema: "${SNOWFLAKE_SCHEMA}"
+
+pipeline:
+  environment: "prod"
+  high_risk_threshold: 0.85
+  log_level: "INFO"
